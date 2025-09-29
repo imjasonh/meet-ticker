@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Cost Ticker</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://www.gstatic.com/meetjs/addons/1.1.0/meet.addons.js"></script>
+</head>
+<body>
+    <!-- Debug status -->
+    <div id="debug-status" style="position: fixed; top: 0; right: 0; background: red; color: white; padding: 4px 8px; font-size: 12px; z-index: 9999;">
+        Loading...
+    </div>
+
+    <div class="container">
+        <!-- Authentication View -->
+        <div id="auth-view" class="view">
+            <div class="header">
+                <h1>Meeting Cost Ticker</h1>
+                <p class="subtitle">Track meeting person-minutes in real-time</p>
+            </div>
+
+            <div class="auth-content">
+                <div class="icon">⏱️</div>
+                <p class="description">
+                    Start tracking the cumulative person-minutes of your Google Meet session.
+                </p>
+                <button id="authorize-button" class="primary-button">
+                    Start Tracking Cost
+                </button>
+                <div id="auth-status" class="status-message"></div>
+            </div>
+        </div>
+
+        <!-- Ticker View -->
+        <div id="ticker-view" class="view hidden">
+            <div class="header">
+                <h1>Meeting Cost</h1>
+                <div class="meeting-info">
+                    <span id="meeting-status" class="status-badge">Active</span>
+                    <span id="participant-count" class="participant-count">-- participants</span>
+                </div>
+            </div>
+
+            <div class="ticker-content">
+                <div class="cost-display">
+                    <div class="cost-value" id="cost-ticker">--</div>
+                    <div class="cost-unit" id="cost-unit">person-minutes</div>
+                </div>
+
+                <div class="meeting-duration">
+                    <span id="elapsed-time">--</span> meeting duration
+                </div>
+
+                <div id="ticker-status" class="status-message"></div>
+            </div>
+        </div>
+
+        <!-- Error View -->
+        <div id="error-view" class="view hidden">
+            <div class="header">
+                <h1>Error</h1>
+            </div>
+            <div class="error-content">
+                <div class="icon error-icon">❌</div>
+                <p id="error-message" class="error-text">Something went wrong</p>
+                <button id="retry-button" class="primary-button">Try Again</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./config.js?v=2"></script>
+    <script src="./main.js?v=2"></script>
+</body>
+</html>

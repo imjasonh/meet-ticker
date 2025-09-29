@@ -1,0 +1,19 @@
+{
+  "name": "meet-ticker-backend",
+  "version": "1.0.0",
+  "description": "Backend Cloud Functions for Meeting Cost Ticker",
+  "main": "index.js",
+  "scripts": {
+    "start": "functions-framework --target=auth",
+    "deploy": "gcloud functions deploy auth --runtime nodejs20 --trigger http --allow-unauthenticated"
+  },
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.0.0",
+    "google-auth-library": "^9.0.0",
+    "googleapis": "^128.0.0",
+    "cors": "^2.8.5"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

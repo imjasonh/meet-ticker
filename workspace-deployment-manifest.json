@@ -1,0 +1,18 @@
+{
+  "addOns": {
+    "common": {
+      "name": "Meeting Cost Ticker",
+      "logoUrl": "https://us-central1-jason-chainguard.cloudfunctions.net/meet-ticker/meet-ticker.png",
+      "layoutProperties": {
+        "primaryColor": "#1a73e8",
+        "secondaryColor": "#4285f4"
+      }
+    },
+    "meet": {
+      "Web": [{
+        "sidePanelUrl": "https://us-central1-jason-chainguard.cloudfunctions.net/meet-ticker/",
+        "addOnOrigins": ["https://us-central1-jason-chainguard.cloudfunctions.net"]
+      }]
+    }
+  }
+}
