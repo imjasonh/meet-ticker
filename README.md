@@ -4,7 +4,7 @@ A Google Meet add-on that tracks real-time person-minutes cost of your meetings.
 
 Built with vanilla JavaScript and deployed as a Google Cloud Function.
 
-![Screencap of sidebar](./screencap.png)
+<img src="./screencap.png" width="50%" alt="Screencap of sidebar">
 
 ## Quick Start
 
